@@ -2,7 +2,7 @@
 .link-wrapper:nth-child(1) {
   position: relative;
   top: 220px;
-  left: 60px;
+  left: 190px;
 }
 
 /* Links - second link */
@@ -30,7 +30,7 @@
 .link-wrapper:nth-child(5) {
   position: relative;
   top: 420px;
-  left: -490px;
+  left: -560px;
 }
 
 body {
@@ -207,7 +207,7 @@ hr {
   100% { width: 100%; transform: scale() skewX(20deg) translateY(3px) rotateX(-40deg) rotateY(-10deg) rotateZ(-15deg); }
 }
 
-/* Index - first link */
+/* Experience - first link */
 .link-wrapper:nth-child(1):hover {
   .shape-wrapper {
     .shape.cyan-fill {
@@ -219,14 +219,14 @@ hr {
   }
 }
 
-/* Ask - second link */
+/* Links - second link */
 .link-wrapper:nth-child(2):hover {
   .shape-wrapper {
     .shape.cyan-fill {
-      transform: scale(6, 1.8);
+      transform: scale(2, 0.5);
     }
     .shape.red-fill {
-      transform: scale(6, 1.8);
+      transform: scale(2.2, 0.6);
     }
   }
 }
@@ -243,7 +243,7 @@ hr {
   }
 }
 
-/* Blog - fourth link */
+/* Projects - fourth link */
 .link-wrapper:nth-child(4):hover {
   .shape-wrapper {
     .shape.cyan-fill {
@@ -255,7 +255,7 @@ hr {
   }
 }
 
-/* Tags - fifth link */
+/* Interests - fifth link */
 .link-wrapper:nth-child(5):hover {
   .shape-wrapper {
     .shape.cyan-fill {
