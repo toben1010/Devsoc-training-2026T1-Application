@@ -140,6 +140,46 @@
         margin-bottom: 20px;
         line-height: 1.5;
       }
+
+      .experience-item {
+        margin-bottom: 30px;
+        padding-bottom: 30px;
+        border-bottom: 1px solid rgba(255, 0, 0, 0.3);
+      }
+
+      .experience-item:last-child {
+        border-bottom: none;
+      }
+
+      .year {
+        color: #ff0000;
+        font-size: 14px;
+        font-weight: 900;
+        margin-bottom: 5px;
+      }
+      
+      .link-button {
+        display: inline-block;
+        background-color: #ff0000;
+        color: white;
+        padding: 12px 30px;
+        margin: 10px 10px 0 0;
+        text-decoration: none;
+        font-family: 'Barlow', sans-serif;
+        font-weight: 900;
+        text-transform: uppercase;
+        border: 2px solid #ff0000;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        transform: skewX(-5deg);
+      }
+
+      .link-button:hover {
+        background: black;
+        border-color: #ff0000;
+        transform: skewX(-5deg) translateY(-3px);
+        box-shadow: 5px 5px 0px #ff0000;
+      }
     </style>
 </head>
 <body>
@@ -151,7 +191,7 @@
 
 <div class="navbar">
   
-  <a class="link-wrapper" href="#">
+  <a class="link-wrapper" href="#" data-target="Experience">
     <span class="fallback">Experience</span>
     <div class="img-wrapper">
       <img class="normal" src="Night/Images/Experience.png">
@@ -170,7 +210,7 @@
     </div>
   </a>
 
-  <a class="link-wrapper" href="#">
+  <a class="link-wrapper" href="#" data-target="Links">
     <span class="fallback">Links</span>
     <div class="img-wrapper">
       <img class="normal" src="Night/Images/Links.png">
@@ -230,7 +270,7 @@
     </div>
   </a>
 
-  <a class="link-wrapper" href="#">
+  <a class="link-wrapper" href="#" data-target="Interests">
     <span class="fallback">Interests</span>
     <div class="img-wrapper">
       <img class="normal" src="Night/Images/Interests.png">
@@ -254,19 +294,87 @@
 </div>
 
 <div class = "content-section">
-    <button class = "back-button">Back</button>
-    <div class = "content-wrapper">
-      <div class = "content-panel" id="About">
-        <h2 class = "content-header">About</h2>
-        <div class="content-box">
-            <h3>Who Am I?</h3>
-            <p>Hello! My name is Toby! I am a second year Computer Science student studying at UNSW. Don't ask me who my github pfp is I won't stop talking about him.</p>
+  <button class = "back-button">Back</button>
+  <div class = "content-wrapper">
+
+    <!-- About Section -->
+    <div class = "content-panel" id="About">
+      <h2 class = "content-header">About</h2>
+      <div class="content-box">
+          <h3>Who Am I?</h3>
+          <p>Hello! My name is Toby! I am a second year Computer Science student studying at UNSW. Don't ask me who my github pfp is I won't stop talking about him.</p>
+    </div>
+  </div>
+  
+  <!-- Experience Section -->
+    <div class = "content-panel" id="Experience">
+      <h2 class = "content-header">Experience</h2>
+      <div class="content-box">
+        <div class = "experience-item">
+          <div class = "year">2024 - Present</div>
+          <h3>Private Tutor</h3>
+          <p>Tutored students in philosophy and ethics, helping them improve their critical thinking and analytical writing skills.</p>
+        </div>
+
+        <div class = "experience-item">
+          <div class = "year">2023-2024</div>
+          <h3>Information Technology Assistant</h3>
+          <p>
+            • Updated and modernised the Kidsaroo company website, driving click-through rates up by 64%. <br>
+            • Enhanced the security of administrative privileges through restricting admin access pasths, improving authentication requirements, and refining role-based access control, along with implementing best-practice security measures.</p>
+        </div>
+
+        <div class = "experience-item">
+          <div class = "year">2023</div>
+          <h3>Information Technology Intern</h3>
+          <p>
+            • Data Entry and Maintenance of Website and User Experience.<br> 
+            • Directly handled over 2000 404 errors on the official G.J. Gardner website.<br> 
+            • Worked in finding website errors before documenting them on Microsoft Excel and then Personally fixing them.
+          </p>
+        </div>
       </div>
     </div>
+    
+    <!-- Projects Section -->
+    <div class = "content-panel" id="projects">
+      <h2 class = "content-header">Projects</h2>
+      <div class="content-box">
+        <h3>I haven't done any yet :( but I would like to ! :)</h3>
+        <img class="normal" src="Night/Images/Dio.jpg">
+      </div>
+  </div>
+
+  <!-- Interests Section -->
+   <div class = "content-panel" id="Interests">
+      <h2 class = "content-header">Interests</h2>
+      <div class="content-box">
+        <h3>What I Like</h3>
+        <p>• Anime, I especally like Monster and Death Note!<br>
+           • Philosophy, I love having long philosophy discussions with people and once I finish my compsci degree I'd love to go back to uni and study it.<br>
+           • Video Games, Persona 5 is one of the best games of all time I know I make it very subtle that I like persona.<br>
+           • Music, I enjoy a wide variety of genres but I especially like Jazz, Latin and Classical music.<br>
+           • History, I collect antiques and love writing essays on my old 1920s typewriter!
+        </p>
+      </div>
+    </div>
+
+    <!-- Links Section -->
+      <div class = "content-panel" id="Links">
+        <h2 class = "content-header">Links</h2>
+        <div class="content-box">
+          <h3>Where To Find Me</h3>
+          <div style="margin-top: 30px;">
+            <a href="https://github.com/toben1010" class="link-button">GitHub</a>
+            <a href="https://www.linkedin.com/in/tobias-smith-b12592386/" class="link-button">LinkedIn</a>
+            <a href="https://www.instagram.com/toben1010/" class="link-button">Instagram</a>
+          </div>
+          <p>And my discord username is .toben1010 :)</p>
+        </div>
+      </div>
   </div>
 </div>
 <script>
-
     const links = document.querySelectorAll('.link-wrapper');
     const contentSection = document.querySelector('.content-section');
     const contentPanels = document.querySelectorAll('.content-panel');
