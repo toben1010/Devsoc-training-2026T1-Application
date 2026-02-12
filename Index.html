@@ -2,26 +2,162 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Live Preview Test</title>
+    <title>Awesome Introductory Page</title>
     <link rel="stylesheet" href="Night/Homeani.css">
+    <style> 
+      .content-section {
+        position: fixed;
+        top: 0px;
+        right: -100%;
+        width: 70%;
+        height: 100%;
+        background: linear-gradient(135deg, black 0%, rgba(10, 10, 10, 0.8) 100%);
+        backdrop-filter: blur(10px);
+        z-index: 9999;
+        transition: right 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+        overflow-y: auto;
+        border-left: #ff0000 solid 2px;
+        box-shadow: -10px 0 40px rgba(0, 0, 0, 0.5);
+      }
+
+      .content-section.active{
+        right: 0;
+      }
+
+      .content-wrapper {
+        padding: 80px 40px;
+        position: relative
+      }
+
+      .back-button {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        background-color: #ff0000;
+        border: none;
+        color: white;
+        text-transform: uppercase;
+        font-family: 'Barlow', sans-serif;
+        font-size: 14px;
+        font-weight: 900;
+        padding: 10px 20px;
+        cursor: pointer;
+        z-index: 100000;
+      }
+
+      .back-button:hover {
+        background-color: black;
+        border: #ff0000 solid 2px;
+        transform: skewX(-5deg) scale(1.05);
+        box-shadow: 5px 5px 0px #ff0000;
+      }
+
+      .back-button:before {
+        content: '< ';
+        margin-right: 10px;
+      }
+
+      .content-panel {
+        display: none;
+        animation: fadeInContent 0.5s ease-out;
+      }
+
+      .content-panel.active {
+        display: block;
+      }
+
+      @keyframes fadeInContent {
+        from { 
+          opacity: 0;
+          transform: translateY(30px); 
+        }
+        to { 
+          opacity: 1; 
+          transform: translateY(0);
+        }
+      }
+
+      .content-header {
+        font-family: 'Barlow', sans-serif;
+        font-size: 32px;
+        color: #ff0000;
+        margin-bottom: 20px;
+        transform: skewX(-5deg);
+        text-shadow: 2px 2px 0px rgba(255, 0, 0, 0.5);
+        animation: fadeInRight 0.5s ease-out;
+      }
+      
+      @keyframes fadeInRight {
+        from { 
+          opacity: 0;
+          transform: translateX(30px) skewX(-5deg); 
+        }
+        to { 
+          opacity: 1; 
+          transform: translateX(0) skewX(-5deg);
+        }
+      }
+
+      .content-box {
+        background: linear-gradient(135deg, black 0%, rgba(10, 10, 10, 0.8) 100%);
+        border: 3px solid #ff0000;
+        position: relative;
+        padding: 20px;
+        overflow: hidden;
+        box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+      }
+
+      .content-box:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 200%;
+        background: linear-gradient(90deg, transparent, black, transparent);
+        animation: shimmer 3s infinite;
+      }
+
+      @keyframes shimmer {
+        0% {left: -100%;}
+        100% {left: 100%;}
+      }
+
+      .content-box h3 {
+        font-family: 'Barlow', sans-serif;
+        color: #ff0000;
+        font-size: 24px;
+        font-weight: 900;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        letter-spacing: 1px;
+      }
+
+      .content-box p {
+        font-family: 'Barlow', sans-serif;
+        color: white;
+        font-size: 16px;
+        margin-bottom: 20px;
+        line-height: 1.5;
+      }
+    </style>
 </head>
 <body>
   <div class="video-background">
   <video autoplay muted loop id="bg-video">
-    <source src="Videos/Night_Background.mp4" type="video/mp4">
-    <source src="your-video.webm" type="video/webm">
-    Your browser does not support the video tag.
+    <source src="Night/Videos/Night_Background.mp4" type="video/mp4">
   </video>
 </div>
 
 <div class="navbar">
   
   <a class="link-wrapper" href="#">
-    <span class="fallback">Index</span>
+    <span class="fallback">Experience</span>
     <div class="img-wrapper">
-      <img class="normal" src="Night/Images/Screenshot 2026-02-10 000538 (1).png">
-      <img class="active" src="Night/Images/Screenshot 2026-02-10 000538 (2).png">
+      <img class="normal" src="Night/Images/Experience.png">
+      <img class="active" src="Night/Images/ExperienceH.png">
     </div>
+
     <div class="shape-wrapper">
       <div class="shape red-fill jelly"><svg x="0px" y="0px"
      viewBox="0 0 108.1 47" enable-background="new 0 0 108.1 47">
@@ -33,12 +169,14 @@
 </svg></div>
     </div>
   </a>
+
   <a class="link-wrapper" href="#">
-    <span class="fallback">Ask</span>
+    <span class="fallback">Links</span>
     <div class="img-wrapper">
-      <img class="normal" src="Night/Images/Screenshot 2026-02-09 232936 (1).png">
-      <img class="active" src="Night/Images/Screenshot 2026-02-09 232936 (2).png">
+      <img class="normal" src="Night/Images/Links.png">
+      <img class="active" src="Night/Images/LinksH.png">
     </div>
+
     <div class="shape-wrapper">
       <div class="shape red-fill jelly"><svg x="0px" y="0px"
      viewBox="0 0 108.1 47" enable-background="new 0 0 108.1 47">
@@ -54,12 +192,14 @@
 </svg></div>
     </div>
   </a>
-  <a class="link-wrapper" href="#">
+
+  <a class="link-wrapper" href="#" data-target="About">
     <span class="fallback">About</span>
     <div class="img-wrapper">
-      <img class="normal" src="Night/Images/dEjjgFK.png">
-      <img class="active" src="Night/Images/x39xRIo.png">
+      <img class="normal" src="Night/Images/About.png">
+      <img class="active" src="Night/Images/AboutH.png">
     </div>
+
     <div class="shape-wrapper">
       <div class="shape red-fill jelly"><svg x="0px" y="0px"
      viewBox="0 0 108.1 47" enable-background="new 0 0 108.1 47">
@@ -71,11 +211,12 @@
 </svg></div>
     </div>
   </a>
-  <a class="link-wrapper" href="#">
-    <span class="fallback">Blog</span>
+
+  <a class="link-wrapper" href="#" data-target="projects">
+    <span class="fallback">Projects</span>
     <div class="img-wrapper">
-      <img class="normal" src="Night/Images/5ec3aa16-c11f-491c-8467-10a609068085 (1).png">
-      <img class="active" src="Night/Images/5ec3aa16-c11f-491c-8467-10a609068085 (2).png">
+      <img class="normal" src="Night/Images/Projects.png">
+      <img class="active" src="Night/Images/ProjectsH.png">
     </div>
     <div class="shape-wrapper">
       <div class="shape red-fill jelly"><svg x="0px" y="0px"
@@ -88,11 +229,12 @@
 </svg></div>
     </div>
   </a>
+
   <a class="link-wrapper" href="#">
-    <span class="fallback">Tags</span>
+    <span class="fallback">Interests</span>
     <div class="img-wrapper">
-      <img class="normal" src="Night/Images/Screenshot 2026-02-09 231340 (1).png">
-      <img class="active" src="Night/Images/Screenshot 2026-02-09 231340 (2).png">
+      <img class="normal" src="Night/Images/Interests.png">
+      <img class="active" src="Night/Images/InterestsH.png">
     </div>
     <div class="shape-wrapper">
       <div class="shape red-fill jelly"><svg x="0px" y="0px"
@@ -110,5 +252,49 @@
     </div>
   </a>
 </div>
+
+<div class = "content-section">
+    <button class = "back-button">Back</button>
+    <div class = "content-wrapper">
+      <div class = "content-panel" id="About">
+        <h2 class = "content-header">About</h2>
+        <div class="content-box">
+            <h3>Who Am I?</h3>
+            <p>Hello! My name is Toby! I am a second year Computer Science student studying at UNSW. Don't ask me who my github pfp is I won't stop talking about him.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+
+    const links = document.querySelectorAll('.link-wrapper');
+    const contentSection = document.querySelector('.content-section');
+    const contentPanels = document.querySelectorAll('.content-panel');
+    const backbutton = document.querySelector('.back-button');
+
+    links.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        const id = link.getAttribute('data-target');
+
+        contentPanels.forEach(panel => {panel.classList.remove('active');});
+
+        contentSection.classList.add('active');
+
+        setTimeout(() => {
+          const target = document.getElementById(id);
+          if (target) {
+            target.classList.add('active');
+          }
+        }, 300);
+      });      
+    });
+
+    backbutton.addEventListener('click', () => {
+      contentPanels.forEach(panel => {panel.classList.remove('active');});
+      contentSection.classList.remove('active');
+    });
+</script>
 </body>
 </html>
