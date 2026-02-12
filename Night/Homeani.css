@@ -9,7 +9,7 @@
 .link-wrapper:nth-child(2) {
   position: relative;
   top: 520px;
-  left: -10px;
+  left: 10px;
 }
 
 /* About - third link */
