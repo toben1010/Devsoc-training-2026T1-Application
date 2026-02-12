@@ -1,0 +1,1 @@
+This folder is just for recordings of me coding to prove I didn't cheat or anything. I didn't record my very first session because to be honest I kinda just forgot lol, but aside from that all code I've done for the project should be screen recorded.
