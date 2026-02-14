@@ -33,6 +33,12 @@
   left: -560px;
 }
 
+.mode-toggle:nth-child(1) {
+  position: fixed;
+  top: 20px;
+  right: 1330px;
+}
+
 body {
   padding-top: 50px;
   height: 100vh;
